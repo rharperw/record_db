@@ -3,7 +3,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
 
 dotenv.config({ path: '.env-local' });
 
@@ -15,7 +14,11 @@ app
   .use(morgan('dev'))
   .use(express.static('public'))
   .use(express.json())
-  .use(bodyParser.urlencoded({ extended: false }));
+  .use(express.urlencoded({ extended: false }))
+
+  .post('/add2', (req, res) => {
+    res.json(req.body);
+  });
 
 /** Routes */
 

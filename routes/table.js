@@ -48,7 +48,6 @@ router.put('/amend', async function (req, res) {
     ]);
 
     res.status(200).send(`Updated DB`);
-    console.log(req.body);
   } catch (error) {
     res.status(400).send(error.message);
   }
