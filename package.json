@@ -1,0 +1,28 @@
+{
+  "name": "record_db2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rharperw/record_db2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rharperw/record_db2/issues"
+  },
+  "homepage": "https://github.com/rharperw/record_db2#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "mariadb": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
