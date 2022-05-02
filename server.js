@@ -2,18 +2,20 @@
 
 const express = require('express');
 const dotenv = require('dotenv');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 dotenv.config({ path: '.env-local' });
 
-const PORT = process.env.PORT || '3001';
-
 const app = express();
+const PORT = process.env.PORT || '3001';
 
 /** Middleware */
 app
-  .use(express.json())
+  .use(morgan('dev'))
   .use(express.static('public'))
-  .use(express.urlencoded({ extended: false }));
+  .use(express.json())
+  .use(bodyParser.urlencoded({ extended: false }));
 
 /** Routes */
 
