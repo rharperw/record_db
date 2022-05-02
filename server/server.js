@@ -28,7 +28,7 @@ app.get('/', (request, response) => {
     .send('To acess entries head to /table/:id where :id is the entry ID');
 });
 
-const userRouter = require('./routes/table');
+const userRouter = require('../server/routes/table');
 app.use('/table', userRouter);
 
 /** Establish listener */

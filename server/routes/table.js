@@ -1,7 +1,7 @@
 const express = require('express');
 const res = require('express/lib/response');
 const router = express.Router();
-const pool = require('../helpers/database');
+const pool = require('../../server/helpers/database');
 let DB_TABLE = process.env.DB_TABLE;
 
 router.get('/:id', async function (req, res) {
